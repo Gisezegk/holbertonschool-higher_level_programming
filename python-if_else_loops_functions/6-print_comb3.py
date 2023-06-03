@@ -6,3 +6,4 @@ for i in range(10):
                 print("{}{}".format(i, n), end=", ")
             elif (i+n) == 19:
                 print("89")
+
