@@ -1,0 +1,30 @@
+The ``2-matrix_divided`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+
+
+This is a test text file.
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+    >>> matrix_divided(None, 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: 'NoneType' object is not iterable
+
+    >>> matrix_divided(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+    >>> matrix_divided('Hi Python', 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided([['a', 2, 'c'], [4, 5, 6]], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
