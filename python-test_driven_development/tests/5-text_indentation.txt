@@ -1,0 +1,14 @@
+The ``5-text_indentation.py`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+This is a test text file.
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+    >>> 5-text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
