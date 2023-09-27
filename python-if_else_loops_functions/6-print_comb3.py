@@ -6,3 +6,4 @@ for i in range(10):
         else:
             print(f"{i}{j}, ", end="")
 print()
+
