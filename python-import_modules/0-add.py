@@ -2,8 +2,10 @@
 a = 1
 b = 2
 
-from add_0 import add
+if __name__ == "__main__":
 
-result = add(a, b)
+    from add_0 import add
 
-print("{} + {} = {}".format(a, b, result))
+    result = add(a, b)
+
+    print("{} + {} = {}".format(a, b, result))
