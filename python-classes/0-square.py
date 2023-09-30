@@ -5,11 +5,8 @@ Class Square that defines a square
 """
 
 
-
 class Square:
-    
     """
     empty plass
     """
-    
     pass
