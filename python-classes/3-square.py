@@ -10,7 +10,7 @@ class Square:
     Create an object of class Square
     """
     def __init__(self, size=0):
-        
+
         """
         Initialize square
 
