@@ -32,6 +32,10 @@ class Rectangle(Base):
         Attributes:
         Value: new width
         """
+        if type(value) is not int:
+            raise TypeError(f"width must be an integer")
+        if value is < 0:
+            raise ValueError(f"width must be > 0")
         self.__width = value
     
     @property
@@ -42,6 +46,8 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """set height of rectangle"""
+        if value is < 0:
+            raise ValueError(f"height must be > 0")
         self.__height = value
 
     @property
@@ -52,6 +58,8 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """set value of x coor"""
+        if value < 0:
+            raise ValueError(f"x must be >= 0")
         self.__x = value
 
     @property
@@ -62,4 +70,5 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """set y coor of the position"""
+       raise ValueError(f"y must be >= 0")
         self.__y = value
