@@ -13,62 +13,54 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-
-    @property
-    def width(self):
-        """
-        Getter
-
-        Return:
-        width of rectangle
-        """
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        """
-        Setter
-
-        Attributes:
-        Value: new width
-        """
-        if type(value) is not int:
-            raise TypeError(f"width must be an integer")
-        if value is < 0:
-            raise ValueError(f"width must be > 0")
-        self.__width = value
     
     @property
+    def width(self):
+        return self._width
+    
+    @width.setter
+    def width(self, value):
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be > 0")
+        self._width = value
+
+    @property
     def height(self):
-        """Get Height of rectangle"""
-        return self.__height
+        return self._height
 
     @height.setter
     def height(self, value):
-        """set height of rectangle"""
-        if value is < 0:
-            raise ValueError(f"height must be > 0")
-        self.__height = value
-
+        """Set height of rectangle"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height mst be > 0")
+        self._height = value
+    
     @property
     def x(self):
-        """get x coor of the position"""
-        return self.__x
-
+        return self._x
+    
     @x.setter
     def x(self, value):
-        """set value of x coor"""
+        """set x position coordenate"""
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
         if value < 0:
-            raise ValueError(f"x must be >= 0")
-        self.__x = value
+            raise ValueError("x must be >= 0")
+        self._x = value
 
     @property
     def y(self):
-        """ set y coor of the position"""
-        return self.__y
+        return self._y
 
     @y.setter
     def y(self, value):
-        """set y coor of the position"""
-       raise ValueError(f"y must be >= 0")
-        self.__y = value
+        """set y position coor"""
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self._y = value
