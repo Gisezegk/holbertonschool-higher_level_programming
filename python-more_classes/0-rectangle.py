@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+
 """
 0-rectangle.py:
-class Rectangle that defines a rectangle
+class Rect that defines a rectangle
 """
 
 

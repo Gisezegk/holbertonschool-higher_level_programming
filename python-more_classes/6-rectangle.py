@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 6-rectangle.py:
 class Rectangle that defines a rectangle
@@ -97,7 +98,7 @@ class Rectangle:
 
     def __repr__(self):
         """
-        new instance wit str
+        new instance with str
         """
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
 
