@@ -9,5 +9,6 @@ class MyList(list):
     class that inherits from list
     """
     def print_sorted(self):
-        order_sort = sorted(self)
-        print(order_sort)
+        if hasattr(self, '__str__'):
+            print(sorted(self))
+            return(sorted(self))
