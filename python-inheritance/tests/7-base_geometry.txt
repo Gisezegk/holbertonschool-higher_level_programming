@@ -1,0 +1,81 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+Test for the BaseGeometry function.  First import
+``BaseGeometry`` from the ``7-base_geometry`` module:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now use it:
+    
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int1", 1)
+    >>> bg.integer_validator("my_int2", 2)
+
+    >>> bg.integer_validator("case_1", "string")
+    Traceback (most recent call last):
+    ...
+    TypeError: case_1 must be an integer
+
+    >>> bg.integer_validator("", None)
+    Traceback (most recent call last):
+    ...
+    TypeError:  must be an integer
+
+    >>> bg.integer_validator("r", -10)
+    Traceback (most recent call last):
+    ...
+    ValueError: r must be greater than 0
+
+    >>> bg.integer_validator("", -10)
+    Traceback (most recent call last):
+    ...
+    ValueError:  must be greater than 0
+
+    >>> bg.integer_validator("case_4", (5,))
+    Traceback (most recent call last):
+    ...
+    TypeError: case_4 must be an integer
+
+    >>> bg.integer_validator("case_5", [5])
+    Traceback (most recent call last):
+    ...
+    TypeError: case_5 must be an integer
+
+    >>> bg.integer_validator("case_6", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: case_6 must be an integer
+
+    >>> bg.integer_validator("case_7", {1, 4})
+    Traceback (most recent call last):
+    ...
+    TypeError: case_7 must be an integer
+
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> bg.integer_validator("case_8")
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> bg.integer_validator("area", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: area must be greater than 0
+
+    >>> bg.integer_validator("case_9", 4.3)
+    Traceback (most recent call last):
+    ...
+    TypeError: case_9 must be an integer
